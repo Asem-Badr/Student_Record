@@ -3,8 +3,8 @@
 #include"student.h"
 #include"common.h"
 int j;
+ struct data student[100];
 void student_data(){
-    struct data student[100];
    student[1].name="Mohmed Ahmed";
    student[1].id=129789;
    student[1].year="2nd";

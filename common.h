@@ -1,11 +1,10 @@
 #ifndef _COMMON_H
 #define _COMMON_H
 typedef struct data{
-    char name[50];
-    char year[10];
+    char *name;
+    char *year;
     int id;
-    char password[20];
-
+    char *password;
 };
 
 #endif
