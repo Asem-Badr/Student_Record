@@ -3,5 +3,5 @@
 void student_data();
 void student_login();
 void student_screen();
-edit_password();
+void edit_password();
 #endif
