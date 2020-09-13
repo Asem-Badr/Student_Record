@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1599838839 source:d:\xblank\com\c\student_record\admin.c
+	<stdio.h>
+	<stdlib.h>
+	"common.h"
+	"admin.h"
+
+1599763290 d:\xblank\com\c\student_record\common.h
+
+1599837720 d:\xblank\com\c\student_record\admin.h
+
+1599838518 source:d:\xblank\com\c\student_record\main.c
+	<stdio.h>
+	<stdlib.h>
+	"common.h"
+	"admin.h"
+
