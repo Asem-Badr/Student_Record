@@ -2,14 +2,13 @@
 #include <string.h>
 #include "student.h"
 #include "common.h"
+#include <conio.h>
 int i;
-int j;
-
 extern data_t student[100];
 
 void student_login()
 {
-
+    system("cls");
     char username[50];
     char userpass[10];
     printf("Enter UserName :");
@@ -18,26 +17,26 @@ void student_login()
     scanf("%s",userpass);
     for(i=0; i<100; i++)
     {
-
-        i=j;
-        student_screen();
-        break;
-
+        if((strcmp(student[i].name,username)==0 && strcmp(student[i].password,userpass)==0))
+        {
+            student_screen();
+            break;
+        }
+        while(!(strcmp(student[i].name,username)==0 && strcmp(student[i].password,userpass)==0))
+        {
+            printf("Invalid username or password\n ");
+            printf("Enter UserName :");
+            scanf("%s",username);
+            printf("Enter Password :");
+            scanf("%s",userpass);
+        }
     }
-    while(!(strcmp(student[i].name,username)==0 && strcmp(student[i].password,userpass)==0))
-    {
-        printf("Invalid username or password\n ");
-        printf("Enter UserName :");
-        scanf("%s",username);
-        printf("Enter Password :");
-        scanf("%s",userpass);
-    }
-
 
 }
 
 void student_screen()
 {
+    system("cls");
     int choice;
     printf("\t\t\t\t 1.View your record.\t\t\t\t\n\t\t\t\t 2.Edit your password.\t\t\t\t\n");
     scanf("%d",&choice);
@@ -53,7 +52,8 @@ void student_screen()
 }
 void view_record()
 {
-    printf("Name : %s\n Year : %s\n ID : %d\n",student[j].name,student[j].year,student[j].id);
+    system("cls");
+    printf("Name : %s\n Year : %s\n ID : %d\n",student[i].name,student[i].year,student[i].id);
 
 }
 void edit_password()
@@ -61,6 +61,6 @@ void edit_password()
     char buffer[100];
     printf("Enter new password : ");
     scanf("%s",&buffer);
-    student[j].password=(char*)malloc(strlen(buffer)+1);
-    strcpy(student[j].password,buffer);
+    student[i].password=(char*)malloc(strlen(buffer)+1);
+    strcpy(student[i].password,buffer);
 }
