@@ -9,6 +9,7 @@ extern data_t student[100];
 
 void student_login()
 {
+    system("cls");
 
     char username[50];
     char userpass[10];
@@ -38,6 +39,7 @@ void student_login()
 
 void student_screen()
 {
+    system("cls");
     int choice;
     printf("\t\t\t\t 1.View your record.\t\t\t\t\n\t\t\t\t 2.Edit your password.\t\t\t\t\n");
     scanf("%d",&choice);
@@ -53,6 +55,7 @@ void student_screen()
 }
 void view_record()
 {
+    system("cls");
     printf("Name : %s\n Year : %s\n ID : %d\n",student[j].name,student[j].year,student[j].id);
 
 }

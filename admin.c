@@ -5,38 +5,39 @@
 #include "admin.h"
 char admin_password[50]="12345";
 extern data_t student [100];
-char arr_index = 3;
+extern index ;
+
 
 void add (void)
 {
     int flag=0;
     while(flag==0)
     {
-        if(student[arr_index].name=='\0')
+        if(student[index].name=='\0')
         {
             flag=1;
             char buffer[100];
             printf("Enter the student name :");
             scanf("%s",&buffer);
-            student[arr_index].name=(char*)malloc(strlen(buffer)+1);
-            strcpy(student[arr_index].name,buffer);
+            student[index].name=(char*)malloc(strlen(buffer)+1);
+            strcpy(student[index].name,buffer);
             printf("\nEnter the student year :");
             scanf("%s",&buffer);
-            student[arr_index].year=(char*)malloc(strlen(buffer)+1);
-            strcpy(student[arr_index].year,buffer);
+            student[index].year=(char*)malloc(strlen(buffer)+1);
+            strcpy(student[index].year,buffer);
             printf("\nEnter the student id :");
-            scanf("%d",&student[arr_index].id);
+            scanf("%d",&student[index].id);
 
             printf("\nEnter the student password :");
             scanf("%s",&buffer);
-            student[arr_index].password=(char*)malloc(strlen(buffer)+1);
-            strcpy(student[arr_index].password,buffer);
+            student[index].password=(char*)malloc(strlen(buffer)+1);
+            strcpy(student[index].password,buffer);
         }
         else
         {
-            arr_index++;
-            if (arr_index==100)
-                arr_index=0;
+            index++;
+            if (index==100)
+                index=0;
         }
     }
 }
@@ -118,6 +119,7 @@ void view (int x)//don't use in main
 }
 void view_student(void)
 {
+    system("cls");
     int user_input,i;
     printf("Enter the student id");
     scanf("%d",&user_input);
@@ -133,6 +135,7 @@ void view_student(void)
 
 void view_all(void)
 {
+    system("cls");
     int i;
     printf("\nname\t\tyear\t\tid\t\tpassword\n");
     for(i=0; i<100; i++)
@@ -165,6 +168,7 @@ void admin_login(void)
 void admin_screen(void)
 {
     int choice;
+    system("cls");
     printf("Enter the number of the operation you want \n 1-add new student \n 2-remove a student \n 3-edit a student record \n 4-view a record \n 5-view all records \n 6-edit password\n");
     scanf("%d",&choice);
     if(choice==1)
