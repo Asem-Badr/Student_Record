@@ -1,24 +1,25 @@
 # depslib dependency file v1.0
-1600128042 source:d:\xblank\com\c\student_record\admin.c
+1600217010 source:d:\xblank\com\c\student_record\admin.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"common.h"
 	"admin.h"
 
-1599763290 d:\xblank\com\c\student_record\common.h
+1600216992 d:\xblank\com\c\student_record\common.h
 
-1600127294 d:\xblank\com\c\student_record\admin.h
+1600216992 d:\xblank\com\c\student_record\admin.h
 
-1600128076 source:d:\xblank\com\c\student_record\student.c
+1600221181 source:d:\xblank\com\c\student_record\student.c
 	<stdio.h>
 	<string.h>
 	"student.h"
 	"common.h"
+	<conio.h>
 
-1600126914 d:\xblank\com\c\student_record\student.h
+1600216963 d:\xblank\com\c\student_record\student.h
 
-1600128118 source:d:\xblank\com\c\student_record\system.c
+1600217010 source:d:\xblank\com\c\student_record\system.c
 	<stdio.h>
 	<stdlib.h>
 	"system.h"
@@ -26,14 +27,14 @@
 	"student.h"
 	"common.h"
 
-1600127314 d:\xblank\com\c\student_record\system.h
+1600217010 d:\xblank\com\c\student_record\system.h
 	<stdio.h>
 	<stdlib.h>
 	"admin.h"
 	"student.h"
 	"common.h"
 
-1600128341 source:d:\xblank\com\c\student_record\main.c
+1600217010 source:d:\xblank\com\c\student_record\main.c
 	<stdio.h>
 	<stdlib.h>
 	"common.h"

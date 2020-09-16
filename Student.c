@@ -3,9 +3,10 @@
 #include "student.h"
 #include "common.h"
 #include <conio.h>
-int i;
+int check_flag;
+int i = 0 ;
 extern data_t student[100];
-
+extern char index ;
 void student_login()
 {
     system("cls");
@@ -15,21 +16,17 @@ void student_login()
     scanf("%s",username);
     printf("Enter Password :");
     scanf("%s",userpass);
-    for(i=0; i<100; i++)
+    for(i=0; i<(index+1); i++)
     {
-        if((strcmp(student[i].name,username)==0 && strcmp(student[i].password,userpass)==0))
+        if((strcmp(student[i].name,username)==0) && (strcmp(student[i].password,userpass)==0))
         {
             student_screen();
-            break;
+            check_flag = 1 ;
         }
-        while(!(strcmp(student[i].name,username)==0 && strcmp(student[i].password,userpass)==0))
-        {
-            printf("Invalid username or password\n ");
-            printf("Enter UserName :");
-            scanf("%s",username);
-            printf("Enter Password :");
-            scanf("%s",userpass);
-        }
+    }
+    if(check_flag == 0){
+        i=0;
+        student_login();
     }
 
 }
