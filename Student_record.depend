@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1599762297 source:d:\xblank\com\c\student_record\main.c
-	<stdio.h>
-	<stdlib.h>
-	"common.h"
-
-1599762122 d:\xblank\com\c\student_record\common.h
-
