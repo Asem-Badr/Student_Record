@@ -31,9 +31,22 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Student.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="admin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="admin.h" />
+		<Unit filename="common.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="student.h" />
+		<Unit filename="system.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="system.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
